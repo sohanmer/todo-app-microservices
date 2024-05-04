@@ -1,0 +1,48 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/todo-frontend/node_modules
+/todo-frontend/.pnp
+/todo-frontend.pnp.js
+
+# testing
+/todo-frontend/coverage
+
+# production
+/todo-frontend/build
+
+# misc
+/todo-frontend/.DS_Store
+/todo-frontend/.env.local
+/todo-frontend/.env.development.local
+/todo-frontend/.env.test.local
+/todo-frontend/.env.production.local
+
+/todo-frontend/npm-debug.log*
+/todo-frontend/yarn-debug.log*
+/todo-frontend/yarn-error.log*
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/todo-display/node_modules
+/todo-display/.pnp
+/todo-display.pnp.js
+
+# testing
+/todo-display/coverage
+
+# production
+/todo-display/build
+
+# misc
+/todo-display/.DS_Store
+/todo-display/.env.local
+/todo-display/.env.development.local
+/todo-display/.env.test.local
+/todo-display/.env.production.local
+
+/todo-display/npm-debug.log*
+/todo-display/yarn-debug.log*
+/todo-display/yarn-error.log*
+
