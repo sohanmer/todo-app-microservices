@@ -17,7 +17,7 @@ spec:
       - name: todo-display
         image: sohanmer/todo-display:latest
         ports:
-        - containerPort: 3100
+        - containerPort: 3200
         env:
         - name: REACT_APP_BACKEND_URL
           value: http://10.90.173.77:3000/get-tasks
@@ -32,6 +32,6 @@ spec:
     app: todo-display-app
   ports:
   - protocol: TCP
-    port: 3100
-    targetPort: 3100
+    port: 3200
+    targetPort: 3200
   type: LoadBalancer
