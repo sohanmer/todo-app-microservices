@@ -4,6 +4,6 @@ COPY public/ /todo-frontend/public
 COPY src/ /todo-frontend/src
 COPY package.json /todo-frontend/
 RUN npm install
-EXPOSE 3000
-ENV REACT_APP_BACKEND_URL="http://127.0.0.1:2000/create-task"
+EXPOSE 3100
+ENV REACT_APP_BACKEND_URL $REACT_APP_BACKEND_URL
 CMD ["npm", "start"]

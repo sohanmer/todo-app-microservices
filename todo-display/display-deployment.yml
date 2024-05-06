@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-display-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: todo-display-app
+  template:
+    metadata:
+      labels:
+        app: todo-display-app
+    spec:
+      containers:
+      - name: todo-display
+        image: sohanmer/todo-display:latest
+        ports:
+        - containerPort: 3100
+        env:
+        - name: REACT_APP_BACKEND_URL
+          value: http://10.90.173.77:3000/get-tasks
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: todo-display-service
+spec:
+  selector:
+    app: todo-display-app
+  ports:
+  - protocol: TCP
+    port: 3100
+    targetPort: 3100
+  type: LoadBalancer

@@ -10,7 +10,8 @@ function App() {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch('http://127.0.0.1:2000/get-tasks'); // Replace with your API endpoint
+        const url = process.env.REACT_APP_BACKEND_URL
+        const response = await fetch(url);
         const jsonData = await response.json();
         setData(jsonData);
       } catch (error) {
@@ -20,7 +21,7 @@ function App() {
       }
     };
 
-    const intervalId = setInterval(fetchData, 5000); // Fetch every 3 seconds
+    const intervalId = setInterval(fetchData, 5000); // Fetch every 5 seconds
 
     // Cleanup function to clear the interval on unmount
     return () => clearInterval(intervalId);

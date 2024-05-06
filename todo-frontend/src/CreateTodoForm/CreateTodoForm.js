@@ -12,10 +12,7 @@ function CreateTodoForm() {
       title: title,
       description: description
     }
-    // const url = 'http://127.0.0.1:2000/create-task';
     const url = process.env.REACT_APP_BACKEND_URL
-    console.log("hellllloooooo")
-    console.log(url)
     const options = {
         method: 'POST',
         'Access-Contol-Allow-Origin': '*',
