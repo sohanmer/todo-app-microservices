@@ -64,6 +64,7 @@ Run the command inside the todo-display directory to create an image of your web
         
         docker push <username>/todo-display
 
+**Note:-** Before proceeding to the next step please create a standard GKE cluster on Google Cloud and connect to the cluster via Google CLI.
 
 3. **kubernetes/manifest** this directory contains all the kubernetes manifest file and using this we will deploy our app and create a public load balancer to access our app from the internet.
 
