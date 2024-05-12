@@ -68,6 +68,8 @@ Run the command inside the todo-display directory to create an image of your web
 
 3. **kubernetes/manifest** this directory contains all the kubernetes manifest file and using this we will deploy our app and create a public load balancer to access our app from the internet.
 
+Replace <username> with your own dockerhub username so that it can pull the image from your directory.
+
 Run the below command inside **kubernetes/manifest** to deploy the backend of the app:-
 
         kubectl apply -f backend-deployment.yml

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: todo-display
-        image: sohanmer/todo-display:latest
+        image: <username>/todo-display:latest
         ports:
         - containerPort: 3200
         env:
